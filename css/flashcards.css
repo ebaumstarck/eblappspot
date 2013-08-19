@@ -1,0 +1,93 @@
+
+#flashcards {
+  display: inline-block;
+  width: 550px;
+}
+
+#flashcards > * {
+  text-align: center;
+}
+
+#flashcard {
+  height: 300px;
+  margin-left: 75px;
+  width: 400px;
+  /*margin-left:auto;
+  margin-right:auto;*/
+}
+
+#flashcard > div {
+  /*height: 100px;*/
+  font-size: 30px;
+}
+
+/*flip the card*/
+/* entire container, keeps perspective */
+.flip-container {
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateX(180deg) translate(0px, -306px);
+}
+
+.flip-container, .front, .back {
+  width: 400px;
+  /*height: 300px;*/
+}
+
+.back {
+  height: 200px;
+  padding-top: 100px;
+}
+
+.front {
+  height: 180px;
+  padding-top: 120px;
+}
+
+.front, .back {
+  background: #fff8dc;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  /*background: rgb(169,226,237);*/
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border-style: solid;
+  border-color: rgb(53,155,198);
+  border-radius: 5px;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateY(180deg);
+}
+
+#show {
+  margin-top: 10px;
+}

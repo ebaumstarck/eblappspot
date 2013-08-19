@@ -1,0 +1,55 @@
+
+.tic-tac-toe.game {
+  background: rgb(231, 201, 151);
+  border: 1px solid #753;
+  border-radius: 5px;
+  float: left;
+  padding: 20px;
+  width: 350px;
+  margin-left: 100px;
+}
+
+.tic-tac-toe.game > div,
+.tic-tac-toe.game table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.cell {
+  /*display: block;*/
+  position:absolute;
+  left:10px;
+  top:10px;
+  /*width:50px;*/
+  /*height:50px;*/
+  background: lightblue;
+  border-color:black;
+  border:2px;
+}
+table{
+  border-collapse: collapse;
+  /*border:1px solid lightblue;*/
+  height:300px;
+  width:300px;
+}
+td{
+  /*border:1px solid lightblue;*/
+  height:50px;
+  text-align:center;
+  width: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Verdana;
+  line-height: 50px;
+}
+
+td.center {
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+
+td.middle {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}

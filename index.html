@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lazy Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chessboard-0.3.0.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/chess.css">
+    <link rel="stylesheet" type="text/css" href="css/flashcards.css">
+    <link rel="stylesheet" type="text/css" href="css/slidingpuzzle.css">
+    <link rel="stylesheet" type="text/css" href="css/tictactoe.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+
+    <script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/chess.min.js"></script>
+    <script type="text/javascript" src="lib/chessboard-0.3.0.min.js"></script>
+    <script type="text/javascript" src="lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="lib/d3.layout.cloud.js"></script>
+    <script type="text/javascript" src="lib/crossfilter.min.js"></script>
+    <script type="text/javascript" src="lib/dc.min.js"></script>
+    <script type="text/javascript" src="lib/leftjoin.js"></script>
+    <script type="text/javascript" src="lib/mstmeta.js"></script>
+    <script type="text/javascript" src="lib/underscore.min.js"></script>
+
+    <script type="text/javascript" src="js/chess.js"></script>
+    <script type="text/javascript" src="js/flashcards.js"></script>
+    <script type="text/javascript" src="js/slidingpuzzle.js"></script>
+    <script type="text/javascript" src="js/tictactoe.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <a href="https://github.com/ebaumstarck">
+      <img style="position: absolute; top: 38px; right: 0; border: 0;"
+           src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+           alt="Fork me on GitHub">
+    </a>
+    <div id="header">
+      Emma B. Liu
+    </div>
+    <div id="container">
+      <div id="left-menu">
+        <h3>Tic Tac Toe</h3>
+        <div>
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/tictactoe_thumb.png"></img>
+            <a class="play" data-game="Tic Tac Toe">Play!</a>
+          </div>
+          <div class="clearfix"></div>
+          <p>The classic game that no one over the age of six should ever lose at.</p>
+        </div>
+
+        <h3>Sliding Puzzle</h3>
+        <div>
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/slidingpuzzle_thumb.png"></img>
+            <a class="play" data-game="Sliding Puzzle">Play!</a>
+          </div>
+          <div class="clearfix"></div>
+          <p>A classic sliding puzzle game over a dessert of bananas and mochi.</p>
+        </div>
+
+        <h3>Chinese&ndash;English Flash Cards</h3>
+        <div>
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/flashcards_thumb.png"></img>
+            <a class="play" data-game="Chinese-English Flash Cards">Play!</a>
+          </div>
+          <div class="clearfix"></div>
+          <p>Test your knowledge of basic Chinese.</p>
+        </div>
+
+        <h3>Chess</h3>
+        <div>
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/chess_thumb.png"></img>
+            <a class="play" data-game="Chess">Play!</a>
+          </div>
+          <div class="clearfix"></div>
+          <p>How about a nice game of chess?</p>
+        </div>
+      </div>
+      <div id="body"></div>
+    </div>
+    <div id="footer">
+      <p>&copy; 2013 Emma Bo Liu</p>
+    </div>
+  </body>
+</html>

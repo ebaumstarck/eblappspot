@@ -1,0 +1,28 @@
+
+.chess-container {
+  display: inline-block;
+  text-align: center;
+}
+
+.chess-container .credit {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.chess-container .credit a:active,
+.chess-container .credit a:link,
+.chess-container .credit a:visited {
+  color: black;
+  text-decoration: underline;
+}
+
+.chess-container .credit a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.chessboard {
+  display: inline-block;
+  margin-left: 20px;
+  width: 400px;
+}
