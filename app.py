@@ -14,6 +14,11 @@ class MainPage(webapp2.RequestHandler):
         os.path.dirname(__file__), "templates/%s.jinja" % target)
     self.response.out.write(template.render(path, {}))
 '''
+class GamesPage(webapp2.RequestHandler):
+  def get(self):
+    path = os.path.join(os.path.dirname(__file__), 'index.html')
+    self.response.out.write(template.render(path, {}))
+
 class SandBoxPage(webapp2.RequestHandler):
   def get(self):
     path = os.path.join(os.path.dirname(__file__), 'sandbox.html')
@@ -35,7 +40,8 @@ class ProgressPage(webapp2.RequestHandler):
 '''
 app = webapp2.WSGIApplication([
     # (r'/(?P<target>\w*)', MainPage),
-     ('/',SandBoxPage),
+    ('/games', GamesPage),
+    ('/', SandBoxPage),
     # ('/loveping',AjaxHandler),
     # ('/progress',ProgressPage)
 ], debug=True)

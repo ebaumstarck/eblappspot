@@ -1,11 +1,16 @@
 $(document).ready(function(){
   // create tage cloud as the background on the home page
+  var canvas = document.getElementById("myCanvas");
+  var height;
+  canvas.width = Math.floor($(window).width());
+  canvas.height = height = Math.floor($(window).height());
   if(!$('#myCanvas').tagcanvas({
       textColour: '#ff0000',
       // outlineColour: '#ff00ff',
       reverse: true,
       depth: 0.8,
       maxSpeed: 0.05,
+      textHeight: Math.ceil(0.03 * height),
       wheelZoom: false
     }, 'tags')) {
     // something went wrong, so hide the canvas container
@@ -65,7 +70,7 @@ $(document).ready(function(){
         });
       }
       $('.menu > div').animate({
-        top: '20px',
+        top: '70px',
         width: '70px',
         height: '70px',
         'line-height': '70px'
