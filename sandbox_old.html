@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/animate.css-master/animate.min.css">
+  <style type="text/css">
+    .menu > div {
+      position: absolute;
+      /*top: 300px;*/
+      border-radius: 50%;
+      width: 100px;
+      height:100px; 
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      font-family: verdana;
+      line-height:100px;
+      display: inline-block;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+    }
+    
+    .home {
+      top: 350px;
+      left: 100px;
+      background-color:#6DC5DD;
+    }
+    .resume {
+      top: 250px;
+      left: 250px;
+      background-color:#F77462;
+    }
+    .projects{
+      top: 300px;
+      left: 400px;
+      background-color: #5DA322;
+    }
+    .contactMe{
+      top: 400px;
+      left: 550px;
+      background-color: #ea4c89;
+    }
+  </style>
+  <script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#pass').keyup(function(e) {
+        var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+        var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+        var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+        if (false == enoughRegex.test($(this).val())) {
+          $('#passstrength').html('More Characters');
+        } else if (strongRegex.test($(this).val())) {
+          $('#passstrength').className = 'ok';
+          $('#passstrength').html('Strong!');
+        } else if (mediumRegex.test($(this).val())) {
+          $('#passstrength').className = 'alert';
+          $('#passstrength').html('Medium!');
+        } else {
+          $('#passstrength').className = 'error';
+          $('#passstrength').html('Weak!');
+        }
+          return true;
+      });
+    var first = true;
+    $('.menu > div').click(function() {
+      var clicked = this;
+      var turnOnClicked = function() {
+        $(clicked).css('box-shadow','0px 0px 8px 8px #F8D45D');
+        $(clicked).addClass('animated pulse');
+      };
+      if (first) {
+        $('.menu > div').animate({
+          top: '100px',
+          width: '70px',
+          height: '70px',
+          'line-height':'70px'
+        }, 1000, turnOnClicked);
+        first = false;
+      } else {
+        $('.menu > div').removeClass('animated pulse');
+        $('.menu > div').css('box-shadow','none');
+        turnOnClicked();
+      }
+    });
+
+    $("input").focus(function(){
+      $(this).css('background-color','gray');
+    });
+  
+    $('#loveping').click(function(){
+      $.ajax({
+        url: '/loveping',
+        type: 'POST',
+        data: {
+          name: 'paul'
+        }
+      }).done(function(msg){
+        $('#answer').html(msg);
+      });
+    });
+     // move the div to the top
+    $("#circle").click(function(){
+      $(this).animate({
+        top: "50",
+        width: '50',
+        height: '50'
+      }, 1000, function(){
+
+      });
+      /*
+      $(this).children().animate({
+        // width: '50px',
+        // height: '50px'
+        'font-size': '+=5'
+      }, 1000)
+      */
+    });
+  });  
+  </script>
+</head>
+<body>
+  <div id="sandbox">
+    <input type="password" name="pass" id="pass" />
+    <div id="passstrength"></div>
+
+    <div id="jquery">
+      <input type="text"></input>
+      <div id="test">test</div>
+    </div>
+    <div id="main">
+      <button id="loveping">love ping</button>
+      <div id="answer"></div>
+    </div>
+    
+    <div class="menu">
+      <div class="home">Home</div>
+      <div class="projects">Projects</div>
+      <div class="resume">Resume</div>
+      <div class="contactMe">Contact</div>
+    </div>
+  
+</body>
+</html>

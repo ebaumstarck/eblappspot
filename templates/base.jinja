@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css-master/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chessboard-0.3.0.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/chess.css">
+    <link rel="stylesheet" type="text/css" href="css/flashcards.css">
+    <link rel="stylesheet" type="text/css" href="css/slidingpuzzle.css">
+    <link rel="stylesheet" type="text/css" href="css/tictactoe.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+
+    <script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/chess.min.js"></script>
+    <script type="text/javascript" src="lib/chessboard-0.3.0.min.js"></script>
+    <script type="text/javascript" src="lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="lib/d3.layout.cloud.js"></script>
+    <script type="text/javascript" src="lib/crossfilter.min.js"></script>
+    <script type="text/javascript" src="lib/dc.min.js"></script>
+    <script type="text/javascript" src="lib/leftjoin.js"></script>
+    <script type="text/javascript" src="lib/mstmeta.js"></script>
+    <script type="text/javascript" src="lib/underscore.min.js"></script>
+
+    <script type="text/javascript" src="js/chess.js"></script>
+    <script type="text/javascript" src="js/flashcards.js"></script>
+    <script type="text/javascript" src="js/slidingpuzzle.js"></script>
+    <script type="text/javascript" src="js/tictactoe.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    {% block header %}
+    <!--
+      <a href="https://github.com/ebaumstarck">
+        <img style="position: absolute; top: 0; right: 0; border: 0;"
+             src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+             alt="Fork me on GitHub">
+      </a>
+      -->
+      <div class="header">
+        <div class="logo">Emma B. Liu</div>
+        <nav>
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/contact">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+      <div id="footer">
+        <p>&copy; 2013 Emma Bo Liu</p>
+      </div>
+    {% endblock %}
+  </body>
+</html>

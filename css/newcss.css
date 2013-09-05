@@ -1,0 +1,72 @@
+  .menu > div {
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 1s;
+        display: inline-block;
+        border-radius: 50%;
+        color: #fff;
+        font-family: verdana;
+        height: 100px; 
+        line-height: 100px;
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+        width: 100px;
+      } 
+
+      .home {
+        background-color: #5DA322;
+        left: 100px;
+        position:absolute;
+        top: 350px;
+      }
+
+      .resume {
+        background-color: #6DC5DD;
+        left: 250px;
+        position: absolute;
+        top: 250px;
+      }
+
+      .projects {
+        background-color: #F77462;
+        left: 400px;
+        position: absolute;
+        top: 300px;
+      }
+      #projectsPage h2 {
+        color: #F77462;
+      }
+
+      .contactMe {
+        background-color: #ea4c89;
+        left: 550px;
+        position: absolute;
+        top: 400px;
+      }
+      #contactPage {
+        border-color: #ea4c89;
+        color: #ea4c89;
+      }
+
+      .content {
+        height: 70%;
+        position: absolute;
+        text-align: center;
+        top: 150px;
+        width: 90%;
+      }
+
+      #homePage {
+        margin-top: -150px;
+      }
+
+      .content .resumeContent{
+        border-color: #F77462;
+        color: #F77462;
+      }
+      .content .projectsContent {
+        border-color: #5DA322;
+        color: #5DA322;
+      }
+    

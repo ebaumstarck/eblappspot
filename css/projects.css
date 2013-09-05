@@ -1,0 +1,88 @@
+
+#container > div {
+  margin: 8px;
+  padding: 0 10px;
+}
+
+#left-menu a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#left-menu .thumb-header {
+  display: table;
+}
+
+#left-menu .thumb-header > *{
+  display: table-cell;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#left-menu .ui-accordion-content {
+  overflow-y: hidden;
+}
+
+#left-menu .clearfix {
+  clear: both;
+}
+
+#left-menu img.thumb {
+  float: left;
+  width: 42px;
+  height: 42px;
+}
+
+.game {
+  background: rgb(231, 201, 151);
+  border: 1px solid #753;
+  border-radius: 5px;
+  float: left;
+  padding: 20px;
+  width: 400px;
+  margin: 0 120px;
+}
+
+.game .title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.game .status {
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.game > div,
+.game table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  font-size: 8pt;
+  text-align: center;
+}
+
+.menu > div {
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height:100px; 
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  font-family: verdana;
+  line-height:100px;
+  display: inline-block;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+}
