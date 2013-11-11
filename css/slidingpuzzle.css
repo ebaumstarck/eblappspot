@@ -1,6 +1,6 @@
 
 .sliding-puzzle.game {
-  height: 550px;
+  height: 580px;
   margin: 0 20px;
   width: 600px;
 }
@@ -9,6 +9,7 @@
   background-image: url("../imgs/banana_mochi.jpg");
   background-repeat: repeat;
   border: 1px solid rgba(80, 80, 80, 0.3);
+  box-sizing: content-box;
   position: absolute;
   z-index: 1;
 }

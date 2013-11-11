@@ -7,7 +7,7 @@ slidingPuzzle.Difficulty = {
   'Standard': 16,
   'Difficult': 25,
   'Suicide': 64
-}
+};
 
 slidingPuzzle.difficulty = 'Standard';
 
@@ -21,21 +21,14 @@ slidingPuzzle.Puzzle = function(element) {
   this.cols = Math.floor(this.numSlices / this.rows);
   this.numSlices = this.rows * this.cols;
   // size of the slice
-  this.pieceSize = 400 / this.rows;//Math.round(500 / this.rows);
+  this.pieceSize = 400 / this.rows;
   // the this.origin of the puzzle
   this.origin = {
-    left: 400,
-    top: 183
+    left: 60,
+    top: 143
   };
-  // this.origin = element.offset();
-  // console.log(this.origin);
   // a count of whether we're this.animating a piece
   this.animating = 0;
-  // // the position of the last piece in indices
-  // this.blankPiece = {
-  //   x: -1,
-  //   y: -1
-  // };
 
   // draw the puzzle
   element.append(
@@ -176,13 +169,16 @@ slidingPuzzle.Puzzle.prototype.shuffle = function(blankPiece, nSteps) {
 
 // draws a sliding puzzle inside the element
 slidingPuzzle.DrawPuzzle = function(element) {
+  if (typeof element == 'string') {
+    element = $('#' + element);
+  }
   element.html('');
   //automatically create div based on the random number
   var puzzle = new slidingPuzzle.Puzzle(element);
 
   var blankPiece = $("#" + element.attr("id") + " .puzzle-piece.puzzle-blankPiece");
   puzzle.shuffle(blankPiece, puzzle.numSlices * puzzle.numSlices);
-  
+   
   $('.puzzle-piece').
       width(Math.round(puzzle.pieceSize) - 2).
       height(Math.round(puzzle.pieceSize) - 2).

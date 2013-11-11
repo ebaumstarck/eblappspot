@@ -143,8 +143,6 @@ tictactoe.ControlBoard = function(element, board) {
       console.log(x + ", " + y);
     var player = board.player;
     if (board.PlaceMove(x, y)) {
-      // $(this).html(player);
-      // player = player == tictactoe.Players.X ? tictactoe.Players.O : tictactoe.Players.X;
       if (board.HasWon(player)) {
         console.log("Player " + player + " has won!");
       } else if (board.IsDone()) {
@@ -161,16 +159,10 @@ tictactoe.ControlBoard = function(element, board) {
 
 // makes a board in the element
 tictactoe.MakeBoard = function(element) {
+  if (typeof element == 'string') {
+    element = $('#' + element);
+  }
   var board = new tictactoe.Board();
   tictactoe.DrawBoard(element, board);
   return board;
 };
-
-// var board;
-
-// $(document).ready(function() {
-//   board = new Board();
-//  // function HasWon(player){
-//   var boardElement = $("#board");
-//   DrawBoard(boardElement, board);
-// })

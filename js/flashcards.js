@@ -119,6 +119,9 @@ flashcards.autoDisplay = (function() {
 
 
 flashcards.Draw = function(element) {
+  if (typeof element == 'string') {
+    element = $('#' + element);
+  }
   element.html(
       '<div id="flashcards">' +
         '<h1>Chinese&ndash;English Flash Cards</h1>' +

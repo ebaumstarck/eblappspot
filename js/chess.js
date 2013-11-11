@@ -4,6 +4,9 @@ var chess = {};
 
 // draws the board
 chess.DrawBoard = function(element) {
+  if (typeof element == 'string') {
+    element = $('#' + element);
+  }
   // element.css("width", "400px");
   element.html(
       '<div class="chess-container">' +

@@ -23,7 +23,7 @@ html {
   text-align: center;
   vertical-align: middle;
   width: 100px;
-} 
+}
 .home {
   background-color: #5DA322;
   left: 10%;
@@ -57,11 +57,12 @@ html {
 }
 
 .content {
-  height: 70%;
+  min-height: 100%;
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
   text-align: center;
   top: 150px;
-  width: 90%;
+  width: 100%;
 }
 
 #homePage {
@@ -75,4 +76,55 @@ html {
 .content .projectsContent {
   border-color: #5DA322;
   color: #5DA322;
+}
+
+
+/** Styles for the projects page. */
+
+.project {
+  background: rgb(231, 201, 151);
+  border: 1px solid #753;
+  border-radius: 5px;
+  display: table;
+  padding: 10px !important;
+  width: 400px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.project .row {
+  display: table-row;
+}
+
+.project .row > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.project .row .title {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.project img.thumb {
+  height: 60px;
+  width: 60px;
+}
+
+.project .title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.project .status {
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.project > div,
+.project table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

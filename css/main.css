@@ -70,7 +70,7 @@ nav li a{
 nav li a:hover{
   background-color: lightblue;
 }
-#left-menu {
+.project {
   float: left;
   width: 300px;
 }
@@ -80,14 +80,14 @@ nav li a:hover{
   padding: 0 10px;
 }
 
-/*#left-menu a:active,
-#left-menu a:hover,
-#left-menu a:link,
-#left-menu a:visited {
+/*.project a:active,
+.project a:hover,
+.project a:link,
+.project a:visited {
   color: #00a;
 }*/
 
-#left-menu a:hover {
+.project a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -95,7 +95,7 @@ nav li a:hover{
 .body {
   /*float: left;*/
 }
-.contact{
+.contact {
   /*text-align: center;*/
   width: 50%;
   height: 60%;
@@ -116,17 +116,17 @@ nav li a:hover{
   color: white;
   padding-left:10%;
 }
-#left-menu .thumb-header {
+.project .thumb-header {
   display: table;
 }
 
-#left-menu .thumb-header > *{
+.project .thumb-header > *{
   display: table-cell;
   vertical-align: middle;
   margin-right: 5px;
 }
 
-#left-menu .ui-accordion-content {
+.project .ui-accordion-content {
   overflow-y: hidden;
 }
 .resume ul #objective{
@@ -135,39 +135,43 @@ nav li a:hover{
   border-radius: 10px;
 }
 
-#left-menu .clearfix {
-  clear: both;
-}
 
-#left-menu img.thumb {
-  float: left;
-  width: 42px;
-  height: 42px;
-}
+/** Styles for the projects page. */
 
-.game {
+.project {
   background: rgb(231, 201, 151);
   border: 1px solid #753;
   border-radius: 5px;
-  float: left;
+  display: block;
+  /*float: left;*/
   padding: 20px;
   width: 400px;
   margin: 0 120px;
 }
 
-.game .title {
+.project .row {
+  display: table-row;
+}
+
+.project .row > div {
+  display: table-cell;
+  vertical-align: middle
+}
+
+
+.project .title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.game .status {
+.project .status {
   font-size: 20px;
   margin-top: 12px;
 }
 
-.game > div,
-.game table {
+.project > div,
+.project table {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
