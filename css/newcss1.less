@@ -1,6 +1,8 @@
 *{
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
+@homeColor : #5DA322;
+
 html { 
   background: url(../imgs/CherryTreeBK.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -9,6 +11,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+/*html{ @include background-size:('cover')}*/
+
 .menu > div {
   -webkit-animation-delay: 0s;
   -webkit-animation-iteration-count: infinite;
@@ -23,13 +27,22 @@ html {
   text-align: center;
   vertical-align: middle;
   width: 100px;
-} 
+  } 
+
+.menuItem(@bk-color,@left,@top){
+  background-color: @bk-color;
+  left: @left;
+  position:absolute;
+  top: @top;
+}
+
 .home {
-  background-color: #5DA322;
+  background-color: @homeColor;
   left: 10%;
   position:absolute;
   top: 65%;
 }
+
 .resume {
   background-color: #6DC5DD;
   left: 35%;

@@ -1,16 +1,16 @@
 $(document).ready(function(){
   // create tage cloud as the background on the home page
-  if(!$('#myCanvas').tagcanvas({
-      textColour: '#ff0000',
-      // outlineColour: '#ff00ff',
-      reverse: true,
-      depth: 0.8,
-      maxSpeed: 0.05,
-      wheelZoom: false
-    }, 'tags')) {
-    // something went wrong, so hide the canvas container
-    $('#myCanvasContainer').hide();
-  }
+  // if(!$('#myCanvas').tagcanvas({
+  //     textColour: 'white',
+  //     // outlineColour: '#ff00ff',
+  //     reverse: true,
+  //     depth: 0.8,
+  //     maxSpeed: 0.05,
+  //     wheelZoom: false
+  //   }, 'tags')) {
+  //   // something went wrong, so hide the canvas container
+  //   $('#myCanvasContainer').hide();
+  // }
 
   // load all the content in one page and hide until user click
   // $('.content').hide();
