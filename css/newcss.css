@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
   box-sizing:border-box;
 }
@@ -9,6 +10,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+=======
+>>>>>>> 5bd72c0d2538b0ec7d129764f5f81994019789c9
 .menu > div {
   -webkit-animation-delay: 0s;
   -webkit-animation-iteration-count: infinite;
@@ -23,6 +26,7 @@ html {
   text-align: center;
   vertical-align: middle;
   width: 100px;
+<<<<<<< HEAD
 } 
 .home {
   background-color: #5DA322;
@@ -68,6 +72,71 @@ html {
   margin-top: -150px;
 }
 
+=======
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.home {
+  background-color: #5DA322;
+  left: 20%;
+  position:absolute;
+  top: 55%;
+}
+
+.resume {
+  background-color: #6DC5DD;
+  left: 40%;
+  position: absolute;
+  top: 35%;
+}
+
+.projects {
+  background-color: #F77462;
+  left: 60%;
+  position: absolute;
+  top: 42%;
+}
+#projectsPage h2 {
+  color: #F77462;
+}
+
+#projectsPage a,
+#projectsPage a:active,
+#projectsPage a:link,
+#projectsPage a:hover,
+#projectsPage a:visited {
+  color: #F77462;
+}
+
+#projectsPage a:hover {
+  text-decoration: underline;
+}
+
+.contactMe {
+  background-color: #ea4c89;
+  left: 80%;
+  position: absolute;
+  top: 55%;
+}
+#contactPage {
+  border-color: #ea4c89;
+  color: #ea4c89;
+}
+
+.content {
+  height: 70%;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  width: 90%;
+}
+
+#homePage {
+  margin-top: -150px;
+}
+
+>>>>>>> 5bd72c0d2538b0ec7d129764f5f81994019789c9
 .content .resumeContent{
   border-color: #F77462;
   color: #F77462;
