@@ -1,6 +1,5 @@
 $(document).ready(function(){
   // create tage cloud as the background on the home page
-<<<<<<< HEAD
   // if(!$('#myCanvas').tagcanvas({
   //     textColour: 'white',
   //     // outlineColour: '#ff00ff',
@@ -12,24 +11,6 @@ $(document).ready(function(){
   //   // something went wrong, so hide the canvas container
   //   $('#myCanvasContainer').hide();
   // }
-=======
-  var canvas = document.getElementById("myCanvas");
-  var height;
-  canvas.width = Math.floor($(window).width());
-  canvas.height = height = Math.floor($(window).height());
-  if(!$('#myCanvas').tagcanvas({
-      textColour: '#ff0000',
-      // outlineColour: '#ff00ff',
-      reverse: true,
-      depth: 0.8,
-      maxSpeed: 0.05,
-      textHeight: Math.ceil(0.03 * height),
-      wheelZoom: false
-    }, 'tags')) {
-    // something went wrong, so hide the canvas container
-    $('#myCanvasContainer').hide();
-  }
->>>>>>> 5bd72c0d2538b0ec7d129764f5f81994019789c9
 
   // load all the content in one page and hide until user click
   // $('.content').hide();
