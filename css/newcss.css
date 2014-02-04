@@ -55,20 +55,19 @@ html {
   border-color: #ea4c89;
   color: #ea4c89;
 }
-
+/*content wrapper*/
 .content {
   min-height: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.46);
   position: absolute;
   text-align: center;
   top: 150px;
-  width: 100%;
+  width: 80%;
+  margin: 10%;
 }
-
 #homePage {
   margin-top: -150px;
 }
-
 .content .resumeContent{
   border-color: #F77462;
   color: #F77462;
@@ -77,10 +76,7 @@ html {
   border-color: #5DA322;
   color: #5DA322;
 }
-
-
-/** Styles for the projects page. */
-
+/** Styles for the projects page. 
 .project {
   background: rgb(231, 201, 151);
   border: 1px solid #753;
@@ -91,37 +87,30 @@ html {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-
 .project .row {
   display: table-row;
 }
-
 .project .row > div {
   display: table-cell;
   vertical-align: middle;
 }
-
 .project .row .title {
   font-size: 1.2em;
   text-align: left;
 }
-
 .project img.thumb {
   height: 60px;
   width: 60px;
 }
-
 .project .title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 .project .status {
   font-size: 20px;
   margin-top: 12px;
 }
-
 .project > div,
 .project table {
   margin-left: auto;
