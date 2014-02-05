@@ -116,7 +116,7 @@ tictactoe.DrawBoard = function(element, board) {
                   return '<td class="' + (rowIdx == 1 ? 'middle' : '') + ' ' +
                                          (columnIdx == 1 ? 'center' : '') + '" ' +
                              'id="' + rowIdx + '_' + columnIdx + '">' +
-                      cell + '</td>';
+                      (cell ? cell : '&nbsp;') + '</td>';
                 }).join('\n') +
                 '</tr>';
           }).join('\n') +

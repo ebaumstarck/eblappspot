@@ -1,4 +1,23 @@
 
+html.flash-cards { 
+  background: none;
+  background-image: url(../imgs/a.png), url(../imgs/b.png), url(../imgs/c.png) !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#flashCards {
+  background: lightcyan;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 40px;
+  width: 610px;
+}
+
 #flashcards {
   display: inline-block;
   width: 550px;
@@ -9,7 +28,7 @@
 }
 
 #flashcard {
-  height: 300px;
+  height: 240px;
   margin-left: 75px;
   width: 400px;
   /*margin-left:auto;
@@ -19,6 +38,10 @@
 #flashcard > div {
   /*height: 100px;*/
   font-size: 30px;
+}
+
+.container {
+  padding: 20px 0;
 }
 
 /*flip the card*/
@@ -31,22 +54,22 @@
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
   transform: rotateY(180deg);
-  -webkit-transform: rotateX(180deg) translate(0px, -306px);
+  -webkit-transform: rotateX(180deg) translate(0, -240px);
 }
 
 .flip-container, .front, .back {
   width: 400px;
-  /*height: 300px;*/
+  height: 240px;
 }
 
 .back {
-  height: 200px;
-  padding-top: 100px;
+  /*height*/: 200px;
+  padding-top: 80px;
 }
 
 .front {
-  height: 180px;
-  padding-top: 120px;
+  /*height: 180px;*/
+  padding-top: 96px;
 }
 
 .front, .back {

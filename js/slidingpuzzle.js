@@ -25,7 +25,8 @@ slidingPuzzle.Puzzle = function(element) {
   // the this.origin of the puzzle
   this.origin = {
     left: 60,
-    top: 143
+    // top: 143
+    top: 163
   };
   // a count of whether we're this.animating a piece
   this.animating = 0;

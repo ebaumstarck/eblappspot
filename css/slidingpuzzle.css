@@ -1,4 +1,16 @@
 
+html.sliding-puzzle { 
+  background: none;
+  background-image: url(../imgs/a.png), url(../imgs/b.png), url(../imgs/c.png) !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#slidingPuzzle {
+  margin-top: 20px;
+}
+
 .sliding-puzzle.game {
   height: 580px;
   margin: 0 20px;

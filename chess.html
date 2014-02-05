@@ -1,13 +1,15 @@
 <!doctype html>
-<html>
+<html class="chess">
   <head>
     {% include 'resources.html' %}
   </head>
   <body>
     <div id="chessBoard">
+      <h2><center>Chess</center></h2>
+      <div id="chessBoard-inner"></div>
     </div>
     <script type="text/javascript">
-      chess.DrawBoard('chessBoard');
+      chess.DrawBoard('chessBoard-inner');
     </script>
   </body>
 </html>
