@@ -1,0 +1,260 @@
+<!--
+  Licensed under the MIT license.
+  Copyright 2013, Emma L. Baumstarck
+
+  Adapted from http://www.codrops.com
+  Licensed under the MIT license.
+  http://www.opensource.org/licenses/mit-license.php
+  Copyright 2013, Codrops
+  http://www.codrops.com
+-->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <title>jQuery Fixed Scroll Background</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="/css/fixedscroll.css" />
+    <link rel="stylesheet" href="css/component.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- jquery.easing by http://gsgd.co.uk/ : http://gsgd.co.uk/sandbox/jquery/easing/ -->
+    <script src="/lib/jquery.easing.min.js"></script>
+    <!-- waypoints jQuery plugin by http://imakewebthings.com/ : http://imakewebthings.com/jquery-waypoints/ -->
+    <script src="/lib/waypoints.min.js"></script>
+    <!-- jquery-smartresize by @louis_remi : https://github.com/louisremi/jquery-smartresize -->
+    <script src="/lib/jquery.debouncedresize.js"></script>
+    <script src="/lib/fixedScrollLayout.js"></script>
+    <script src="/js/main2.js"></script>   
+  </head>
+  <body>
+    <div class="container">    
+      <div id="scroller" class="scroller">
+      </div>
+    </div>
+
+    <div id="mainContent">
+      <header>
+        <h2 style="color: #FF768C">Emma L. Baumstarck</h2>
+      </header>
+      <p>
+        Software Engineer<br>
+        Bay Area, California
+      </p>
+      <p>
+        I am passionate about programming, making the web prettier,
+        <br>and creating awesome apps.
+      </p>
+    </div>
+
+
+    <div id="resumeContent">
+      <header>
+        <h2>Resume</h2>
+      </header>
+      <ul class="cbp_tmtimeline">
+        <li>
+          <time class="cbp_tmtime" datetime="2013-08">
+            <span>01/13 - Present</span>
+          </time>
+          <div class="cbp_tmicon cbp_tmicon-phone"></div>
+          <div class="cbp_tmlabel">
+            <h2>Cloud Web Developer</h2>
+            <p>http://emmaboliu.appspot.com (Google AppEngine, Python)
+              <ul> 
+                <li>Developed jQuery plugin for fixed scroll background with responsive design.</li>
+                <li>Developed games in JavaScript, HTML, and CSS using JavaScript libraries (Underscore.js, JQuery UI).</li>
+                <li>Developed English–Cinese flash card application using a Python backend on Google AppEngine</li>
+              </ul>
+            </p>
+          </div>
+        </li>
+        <li>
+          <time class="cbp_tmtime" datetime="2012-12"><span>12/2012 – 02/2012</span></time>
+          <div class="cbp_tmicon cbp_tmicon-screen"></div>
+          <div class="cbp_tmlabel">
+            <h2>Global Computer Enterprises Frontend Developer</h2>
+            <p>Cloud computing company (JavaScript, JQuery, Node.js, Dojo, HBase)
+              <ul>
+                <li>Developed features for an analytical web tool for big data visualization, including user comments, user ratings, and integration with the Yelp and Google Maps APIs.</li>
+                <li>Experimented with and evaluated new cloud technologies.</li>
+                <li>Interviewed prospective candidates and developed uniform testing regimen for other interviews.</li>
+              </ul>
+            </p>
+          </div>
+        </li>
+        <li>
+          <time class="cbp_tmtime" datetime="2012-02"><span>08/2011 – 06/2011</span></time>
+          <div class="cbp_tmicon cbp_tmicon-mail"></div>
+          <div class="cbp_tmlabel">
+            <h2>Jefferies & Company Software Engineer Intern</h2>
+            <p>Investment bank (Java, Hibernate, Oracle)
+              <ul>
+                <li>Designed and Implemented real-time, multi-threaded securities analysis tools.</li>
+                <li>Published on IRON trading system and generated real-time charts for securities prediction.</li>
+                <li>Improved code efficiency and reduced memory consumption.</li>
+            </p>
+          </div>
+        </li>
+        <li>
+          <time class="cbp_tmtime" datetime="2010-08"><span>02/2012 – 08/2010</span></time>
+          <div class="cbp_tmicon cbp_tmicon-phone"></div>
+          <div class="cbp_tmlabel">
+            <h2>Columbia University M.S. in Computer Science</h2>
+            <p>
+              <ul>
+                <li>TA for Cloud Computing, 2011.</li>
+                <li>Honors:  Goldman Sachs Programming Contest, Third Prize, 2010.</li>
+                <li>Advanced Software Engineering Game Design (Java, Swing, EJB, JMS, Glassfish) </li> 
+                <ul>
+                  <li>Team Leader: Designed the software architecture and make requirement analysis </li>
+                  <li>Developed an online card game for multiple users to play and manage their game account.</li>
+                  <li>Implemented user interface, database, JMS, singleton bean.</li>
+                  <li>Participated in unit testing, integration testing, system testing and stress testing.</li>
+                </ul>
+                <li>
+                  Plants Image Searching iPad Software (Objective-C)
+                  <ul>
+                    <li>Project reported by New York Times and released at Apple Store.</li>
+                    <li>Developed leaf recognition software using photos of leaves to train image recognition.</li>
+                    <li>Designed and implemented program on iPad and iPhone for user interface.</li>
+                    <li>Project page: http://leafsnap.com/about/ </li>
+                  </ul>
+                </li>
+            </p>
+          </div>
+        </li>
+        <li>
+          <time class="cbp_tmtime" datetime="2010-08"><span>07/2010 – 09/2006</span></time>
+          <div class="cbp_tmicon cbp_tmicon-phone"></div>
+          <div class="cbp_tmlabel">
+            <h2>Northeastern University of China B.E. in Computer Science</h2>
+            <p>
+              <ul>
+                <li>Honors: Excellent Student of Northeastern University, 2010.</li>
+              </ul>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="projectContent">
+      <header>
+        <h2>Projects</h2>
+      </header>
+
+      <div class="project">
+        <div class="row">
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/fixedscroll_thumb.png"></img>
+          </div>
+          <div class="title">
+            <a href="http://fixedscroll.appspot.com/">Fixed Scroll Layout</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/flashcards_thumb.png"></img>
+          </div>
+          <div class="title">
+            <a href="/flash-cards">Chinese&ndash;English Flash Cards</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/slidingpuzzle_thumb.png"></img>
+          </div>
+          <div class="title">
+            <a href="/sliding-puzzle">Sliding Puzzle</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/chess_thumb.png"></img>
+          </div>
+          <div class="title">
+            <a href="/chess">Chess</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="thumb-header">
+            <img class="thumb" src="imgs/leafsnap_thumb.png"></img>
+          </div>
+          <div class="title">
+            <a href="http://leafsnap.com/about/">Leaf Snap</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      function contactMeSubmit() {
+        var name = document.getElementById('contact-me-name').value;
+        var email = document.getElementById('contact-me-email').value;
+        var body = document.getElementById('contact-me-body').value;
+        if (!name || !name.length || !email || !email.length || !body || !body.length) {
+          alert('Please specify a name, email, and message.');
+          return;
+        }
+        $.ajax({
+          url: '/mail',
+          data: {
+            'name': name,
+            'email': email,
+            'body': body
+          },
+          success: function(response) {
+            alert(response);
+          }
+        });
+      }
+    </script>
+
+    <div id="contactContent"> 
+      <header>
+        <h2>Contact Me</h2>
+        <p>
+           <form id="userCommentForm" class="contact">
+            <div>
+              <label for="contact-me-name">Name:</label>
+              <input type="text" name="name" id="contact-me-name"><br>
+              <label for="contact-me-email">Email:</label>
+              <input type="text" name="email" id="contact-me-email"><br>
+              <label for="contact-me-body">Message:</label>
+              <textarea rows="20" cols="20" id="contact-me-body"></textarea><br>
+
+              <input type="button" onclick="javascript:contactMeSubmit()" value="Submit">
+            </div>
+           
+           <a href="https://twitter.com/emmabsmile" class="twitter-follow-button" data-show-count="false">Follow @emmaliusmile</a>
+           <script>
+           !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0],
+              p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){js=d.createElement(s);
+              js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+              fjs.parentNode.insertBefore(js,fjs);
+            }}(document, 'script', 'twitter-wjs');</script>
+        
+
+        </p>
+      </header>
+
+    </div>
+  </body>
+</html>

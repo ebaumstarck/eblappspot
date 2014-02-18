@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="questions" ng-app>
+  <head>
+    {% include 'resources.html' %}
+  </head>
+  <body>
+    {% raw %}
+      <div class="question">
+        <h2><center>ReverseInt</center></h2>
+        <center>Reverses digits of an integer.</center>
+        <br>
+        <script type="text/javascript">
+          function ReverseIntCtrl($scope) {
+            $scope.number = 123;
+            $scope.reversed = function() {
+              return reverse_int($scope.number);
+            };
+          }
+        </script>
+        <div ng-controller="ReverseIntCtrl">
+          <div class="input">
+            <input type="number" ng-model="number"></input>
+          </div>
+          <div class="output">
+            Reversed: {{ reversed() }}
+          </div>
+        </div>
+        <div class="code">
+          <h4>Python</h4>
+          <textarea id="reverse-int-code">
+def reverse_int(num0):
+  '''Reverse digits of an integer.
+
+  Example1: x = 123, return 321
+  Example2: x = -123, return -321
+  '''
+  num = num0
+  if not num:
+    return num
+  elif num > 0:
+    num_list = list(str(num))
+    num_list.reverse()
+  else:
+    num_list = list(str(num))[1:]
+    num_list.reverse()
+    num_list.insert(0,'-')   
+  return int(''.join(num_list))
+
+print reverse_int(-123)
+          </textarea>
+        </div>
+        <script>
+          CodeMirror.fromTextArea(
+              document.getElementById('reverse-int-code'), {mode: 'python'});
+        </script>
+      </div>
+
+      <div class="question">
+        <h2><center>Binary Search Square Root</center></h2>
+        <center>Finds a square root using binary search.</center>
+        <br>
+        <script type="text/javascript">
+          function BinarySearchSquareRootCtrl($scope) {
+            $scope.number = 13;
+            $scope.eps = 0.01;
+            $scope.states = [];
+            $scope.square = NaN;
+            $scope.reversed = function() {
+              return reverse_int($scope.number);
+            };
+            $scope.$watch('[number,eps]', function() {
+              var sqrtStruct = Sqrt($scope.number, $scope.eps);
+              $scope.states = sqrtStruct.states;
+              $scope.square = sqrtStruct.square;
+            }, true);
+          }
+        </script>
+        <div ng-controller="BinarySearchSquareRootCtrl">
+          <div class="input">
+            <input type="number" ng-model="number"></input>
+            <input type="number" ng-model="eps"></input>
+          </div>
+          <div class="output">
+            <div class="range" ng-repeat="state in states">
+              Iteration #{{ $index + 1 }}: [{{ state.min }}, {{ state.max }}]
+              <!--
+              <span class="binary-span"
+                    style="border-left: 1px solid red;
+                           border-right: 1px solid red;
+                           display: inline-block;
+                           margin-left: {{ state.min * 10 }}px;
+                           width: {{ (state.max - state.min) * 10 }}px;">&nbsp;</span>
+              -->
+            </div>
+            <div class="answer">Approximate square root: {{ square }}</div>
+          </div>
+        </div>
+        <div class="code">
+          <h4>Python</h4>
+          <textarea id="binary-search-square-root-code">
+def sqrt1(num, eps):
+  '''Finds a square root using binary search.'''
+  i = 0.0
+  j = num / 2.0 + 1.0
+  while i < j:
+    mid = (i + j) / 2.0
+    square = mid ** 2.0
+    if abs(square - num) <= eps:
+      return mid
+    elif square < num:
+      i = mid
+    else:
+      j = mid
+  return j 
+
+print sqrt1(13)
+          </textarea>
+        </div>
+        <script>
+          CodeMirror.fromTextArea(
+              document.getElementById('binary-search-square-root-code'),
+              {mode: 'python'});
+        </script>
+      </div>
+    {% endraw %}
+  </body>
+</html>
