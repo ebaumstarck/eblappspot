@@ -1,10 +1,33 @@
+<script type="text/javascript">
+function contactMeSubmit() {
+  console.log('Hello!');
+  var name = document.getElementById('contact-me-name').value;
+  var email = document.getElementById('contact-me-email').value;
+  var body = document.getElementById('contact-me-body').value;
+  if (!name || !name.length || !email || !email.length || !body || !body.length) {
+    alert('Please specify a name, email, and message.');
+    return;
+  }
+  $.ajax({
+    url: '/mail',
+    data: {
+      'name': name,
+      'email': email,
+      'body': body
+    },
+    success: function(response) {
+      alert(response);
+    }
+  });
+}
+</script>
 <form id="userCommentForm" class="contact">
   <h1>Contact Me</h1>
   <div>
-    Name<br><input type="text" name="name"><br>
-    Email<br><input type="text" name="name"><br>
-    Message<br><textarea rows="10" cols="30"></textarea><br>
-    <button type="submit">submit</button>
+    Name<br><input type="text" name="name" id="contact-me-name"><br>
+    Email<br><input type="text" name="email" id="contact-me-email"><br>
+    Message<br><textarea rows="10" cols="30" id="contact-me-body"></textarea><br>
+    <input type="button" onclick="javascript:contactMeSubmit()" value="Submit"></input>
   </div>
   <!--
   <div>

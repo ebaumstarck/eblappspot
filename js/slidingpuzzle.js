@@ -6,7 +6,7 @@ slidingPuzzle.Difficulty = {
   'Easy': 9,
   'Standard': 16,
   'Difficult': 25,
-  'Suicide': 64
+  'Ludicrous': 64
 };
 
 slidingPuzzle.difficulty = 'Standard';

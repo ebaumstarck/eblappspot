@@ -3,10 +3,10 @@ $(document).ready(function(){
     // or provide a list of background images or colors
     'backgrounds': [
         // '/imgs/LasVegas.JPG',
-        '/imgs/SanFrancisco2.JPG',
+        '/imgs/SanFrancisco2.jpg',
         '/imgs/SanJuanIsland.JPG',
         '/imgs/GoldenBridge.JPG',
-        '/imgs/CherryTreeBK2.JPG',
+        '/imgs/CherryTreeBK2.jpg',
     ],
     // also specify the number of sections manually with 'numSections'
     // 'numSections': 5,
